@@ -29,7 +29,7 @@
 ** OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ** ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
+#include <inttypes.h>
 #include	<stdio.h>
 #include	<stdlib.h>
 #include	<string.h>
@@ -368,7 +368,7 @@ broadcast_dump (const char *filename)
 	if (bext.time_reference_high == 0 && bext.time_reference_low == 0)
 		printf ("Time ref                 : 0\n") ;
 	else
-		printf ("Time ref                 : 0x%x%08x (%.6f seconds)\n", bext.time_reference_high, bext.time_reference_low, time_ref_sec) ;
+		printf ("Time ref                 : 0x%" PRIx32 "%08" PRIx32 " (%.6f seconds)\n",bext.time_reference_high, bext.time_reference_low,time_ref_sec);
 
 	printf ("BWF version              : %d\n", bext.version) ;
 
@@ -387,7 +387,7 @@ broadcast_dump (const char *filename)
 		printf ("Max. short term loudness : %6.2f LUFS\n", bext.max_shortterm_loudness / 100.0) ;
 		} ;
 
-	printf ("Coding history           : %.*s\n", bext.coding_history_size, bext.coding_history) ;
+	printf ("Coding history           : %.*s\n",         (int)bext.coding_history_size,bext.coding_history);
 
 	return 0 ;
 } /* broadcast_dump */
@@ -508,16 +508,18 @@ cart_dump (const char *filename)
 	printf ("App id         : %.*s\n", (int) sizeof (cart.producer_app_id), cart.producer_app_id) ;
 	printf ("App version    : %.*s\n", (int) sizeof (cart.producer_app_version), cart.producer_app_version) ;
 	printf ("User defined   : %.*s\n", (int) sizeof (cart.user_def), cart.user_def) ;
-	printf ("Level ref.     : %d\n", cart.level_reference) ;
+	printf ("Level ref.     : %" PRId32 "\n", cart.level_reference);
 	printf ("Post timers    :\n") ;
 
 	for (k = 0 ; k < ARRAY_LEN (cart.post_timers) ; k++)
 		if (cart.post_timers [k].usage [0])
-			printf ("  %d   %.*s    %d\n", k, (int) sizeof (cart.post_timers [k].usage), cart.post_timers [k].usage, cart.post_timers [k].value) ;
+			printf ("  %d   %.*s    %" PRId32 "\n", k, (int) sizeof (cart.post_timers [k].usage), 
+        cart.post_timers [k].usage, 
+        cart.post_timers [k].value);
 
 	printf ("Reserved       : %.*s\n", (int) sizeof (cart.reserved), cart.reserved) ;
 	printf ("Url            : %.*s\n", (int) sizeof (cart.url), cart.url) ;
-	printf ("Tag text       : %.*s\n", cart.tag_text_size, cart.tag_text) ;
+	printf ("Tag text       : %.*s\n", (int)cart.tag_text_size, cart.tag_text);
 
 	return 0 ;
 } /* cart_dump */

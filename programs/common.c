@@ -180,7 +180,7 @@ merge_broadcast_info (SNDFILE * infile, SNDFILE * outfile, int format, const MET
 	{	if (info->coding_hist_append)
 		{	int slen = (int) strlen (binfo.coding_history) ;
 
-			while (slen > 1 && isspace (binfo.coding_history [slen - 1]))
+			while (slen > 1 && isspace ((unsigned char)binfo.coding_history [slen - 1]))
 				slen -- ;
 
 			memcpy (binfo.coding_history + slen, info->coding_history, sizeof (binfo.coding_history) - slen) ;

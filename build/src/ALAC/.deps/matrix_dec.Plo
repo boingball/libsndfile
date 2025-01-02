@@ -1,0 +1,34 @@
+src/ALAC/matrix_dec.lo: ../src/ALAC/matrix_dec.c src/config.h \
+ ../src/ALAC/matrixlib.h /opt/amiga13/m68k-amigaos/sys-include/stdint.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/_default_types.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/features.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/_newlib_version.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_intsup.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_stdint.h \
+ ../src/ALAC/ALACAudioTypes.h ../src/sfendian.h ../src/sfconfig.h \
+ /opt/amiga13/m68k-amigaos/sys-include/inttypes.h \
+ /opt/amiga13/m68k-amigaos/sys-include/newlib.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/config.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/ieeefp.h \
+ /opt/amiga13/m68k-amigaos/sys-include/_ansi.h \
+ /opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stddef.h \
+ /opt/amiga13/m68k-amigaos/sys-include/xlocale.h ../src/ALAC/shift.h
+src/config.h:
+../src/ALAC/matrixlib.h:
+/opt/amiga13/m68k-amigaos/sys-include/stdint.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/_default_types.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/features.h:
+/opt/amiga13/m68k-amigaos/libnix/include/_newlib_version.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_intsup.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_stdint.h:
+../src/ALAC/ALACAudioTypes.h:
+../src/sfendian.h:
+../src/sfconfig.h:
+/opt/amiga13/m68k-amigaos/sys-include/inttypes.h:
+/opt/amiga13/m68k-amigaos/sys-include/newlib.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/config.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/ieeefp.h:
+/opt/amiga13/m68k-amigaos/sys-include/_ansi.h:
+/opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stddef.h:
+/opt/amiga13/m68k-amigaos/sys-include/xlocale.h:
+../src/ALAC/shift.h:

@@ -1,0 +1,112 @@
+src/libsndfile_la-ogg_vorbis.lo: ../src/ogg_vorbis.c ../src/sfconfig.h \
+ src/config.h /opt/amiga13/m68k-amigaos/libnix/include/stdio.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/string.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/cdefs.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/_default_types.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/features.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/_newlib_version.h \
+ /opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stddef.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/types.h \
+ /opt/amiga13/m68k-amigaos/sys-include/_ansi.h \
+ /opt/amiga13/m68k-amigaos/sys-include/newlib.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/config.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/ieeefp.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/_types.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_types.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/lock.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_stdint.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/endian.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/_endian.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/select.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_sigset.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_timeval.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/timespec.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_timespec.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_pthreadtypes.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/sched.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/types.h \
+ /opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stdarg.h \
+ /opt/amiga13/m68k-amigaos/sys-include/fcntl.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/fcntl.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_default_fcntl.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/stat.h \
+ /opt/amiga13/m68k-amigaos/sys-include/time.h \
+ /opt/amiga13/m68k-amigaos/sys-include/_ansi.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/sys/reent.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/time.h \
+ /opt/amiga13/m68k-amigaos/sys-include/xlocale.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/time.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/_time.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/ctype.h \
+ /opt/amiga13/m68k-amigaos/sys-include/math.h \
+ /opt/amiga13/m68k-amigaos/sys-include/unistd.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/unistd.h ../include/sndfile.h \
+ /opt/amiga13/m68k-amigaos/sys-include/stdint.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_intsup.h ../src/sfendian.h \
+ /opt/amiga13/m68k-amigaos/sys-include/inttypes.h ../src/common.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/stdlib.h \
+ /opt/amiga13/m68k-amigaos/sys-include/stdlib.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/errno.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/sys/errno.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/errno.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/stdlib.h \
+ /opt/amiga13/m68k-amigaos/sys-include/alloca.h \
+ /opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stdbool.h
+../src/sfconfig.h:
+src/config.h:
+/opt/amiga13/m68k-amigaos/libnix/include/stdio.h:
+/opt/amiga13/m68k-amigaos/libnix/include/string.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/cdefs.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/_default_types.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/features.h:
+/opt/amiga13/m68k-amigaos/libnix/include/_newlib_version.h:
+/opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stddef.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/types.h:
+/opt/amiga13/m68k-amigaos/sys-include/_ansi.h:
+/opt/amiga13/m68k-amigaos/sys-include/newlib.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/config.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/ieeefp.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/_types.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_types.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/lock.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_stdint.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/endian.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/_endian.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/select.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_sigset.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_timeval.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/timespec.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_timespec.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_pthreadtypes.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/sched.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/types.h:
+/opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stdarg.h:
+/opt/amiga13/m68k-amigaos/sys-include/fcntl.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/fcntl.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_default_fcntl.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/stat.h:
+/opt/amiga13/m68k-amigaos/sys-include/time.h:
+/opt/amiga13/m68k-amigaos/sys-include/_ansi.h:
+/opt/amiga13/m68k-amigaos/libnix/include/sys/reent.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/time.h:
+/opt/amiga13/m68k-amigaos/sys-include/xlocale.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/time.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/_time.h:
+/opt/amiga13/m68k-amigaos/libnix/include/ctype.h:
+/opt/amiga13/m68k-amigaos/sys-include/math.h:
+/opt/amiga13/m68k-amigaos/sys-include/unistd.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/unistd.h:
+../include/sndfile.h:
+/opt/amiga13/m68k-amigaos/sys-include/stdint.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_intsup.h:
+../src/sfendian.h:
+/opt/amiga13/m68k-amigaos/sys-include/inttypes.h:
+../src/common.h:
+/opt/amiga13/m68k-amigaos/libnix/include/stdlib.h:
+/opt/amiga13/m68k-amigaos/sys-include/stdlib.h:
+/opt/amiga13/m68k-amigaos/libnix/include/errno.h:
+/opt/amiga13/m68k-amigaos/libnix/include/sys/errno.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/errno.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/stdlib.h:
+/opt/amiga13/m68k-amigaos/sys-include/alloca.h:
+/opt/amiga13/lib/gcc/m68k-amigaos/13.2.0/include/stdbool.h:

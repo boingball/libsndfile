@@ -17,7 +17,7 @@
 */
 
 #include <config.h>
-
+#include <string.h>
 #include <limits.h>
 #include <stdarg.h>
 #include <string.h>
@@ -35,8 +35,17 @@
 #include "sndfile.h"
 #include "sfendian.h"
 #include "common.h"
-
+#include <inttypes.h>
 #define	INITIAL_HEADER_SIZE	256
+// Check if strnlen is not available
+#ifndef HAVE_STRNLEN
+#ifndef strnlen
+static size_t strnlen(const char *s, size_t maxlen) {
+    const char *end = memchr(s, 0, maxlen);
+    return end ? (size_t)(end - s) : maxlen;
+}
+#endif
+#endif
 
 /* Allocate and initialize the SF_PRIVATE struct. */
 SF_PRIVATE *
@@ -1835,12 +1844,12 @@ psf_open_tmpfile (char * fname, size_t fnamelen)
 		} ;
 
 	if (tmpdir && access (tmpdir, R_OK | W_OK | X_OK) == 0)
-	{	snprintf (fname, fnamelen, "%s/%x%x-alac.tmp", tmpdir, psf_rand_int32 (), psf_rand_int32 ()) ;
+	{	snprintf (fname, fnamelen, "%s/%" PRIx32 "%" PRIx32 "-alac.tmp", tmpdir, psf_rand_int32(), psf_rand_int32());
 		if ((file = fopen (fname, "wb+")) != NULL)
 			return file ;
 		} ;
 
-	snprintf (fname, fnamelen, "%x%x-alac.tmp", psf_rand_int32 (), psf_rand_int32 ()) ;
+	snprintf (fname, fnamelen, "%" PRIx32 "%" PRIx32 "-alac.tmp", psf_rand_int32(), psf_rand_int32());
 	if ((file = fopen (fname, "wb+")) != NULL)
 		return file ;
 

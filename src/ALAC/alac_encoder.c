@@ -29,7 +29,7 @@
 
 // headers
 #include "config.h"
-
+#include <inttypes.h> 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -480,7 +480,7 @@ EncodeStereo (ALAC_ENCODER *p, struct BitBuffer * bitstream, const int32_t * inp
 		{
 			*bitstream = startBits ;		// reset bitstream state
 			doEscape = true ;
-			printf ("compressed frame too big: %u vs. %u \n", minBits, escapeBits) ;
+			printf ("compressed frame too big: %" PRIu32 " vs. %" PRIu32 "\n", minBits, escapeBits);
 		}
 	}
 
@@ -656,7 +656,7 @@ EncodeStereoFast (ALAC_ENCODER *p, struct BitBuffer * bitstream, const int32_t *
 		if (minBits >= escapeBits)
 		{
 			doEscape = true ;
-			printf ("compressed frame too big: %u vs. %u\n", minBits, escapeBits) ;
+			printf ("compressed frame too big: %" PRIu32 " vs. %" PRIu32 "\n", minBits, escapeBits);
 		}
 
 	}
@@ -905,7 +905,7 @@ EncodeMono (ALAC_ENCODER *p, struct BitBuffer * bitstream, const int32_t * input
 		{
 			*bitstream = startBits ;		// reset bitstream state
 			doEscape = true ;
-			printf ("compressed frame too big: %u vs. %u\n", minBits, escapeBits) ;
+			printf ("compressed frame too big: %" PRIu32 " vs. %" PRIu32 "\n", minBits, escapeBits);
 		}
 	}
 
@@ -1053,7 +1053,7 @@ alac_encode (ALAC_ENCODER *p, uint32_t numSamples,
 					break ;
 
 				default:
-					printf ("That ain't right! (%u)\n", tag) ;
+					printf ("That ain't right! (%" PRIu32 ")\n", tag);
 					status = kALAC_ParamError ;
 					goto Exit ;
 			}

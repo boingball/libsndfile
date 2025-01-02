@@ -1241,8 +1241,8 @@ wavlike_read_peak_chunk (SF_PRIVATE * psf, size_t chunk_size)
 		psf->peak_info->peaks [uk].value = value ;
 		psf->peak_info->peaks [uk].position = position ;
 
-		snprintf (buffer, sizeof (buffer), "    %2d   %-12" PRId64 "   %g\n",
-				uk, psf->peak_info->peaks [uk].position, psf->peak_info->peaks [uk].value) ;
+		snprintf (buffer, sizeof (buffer), "    %2" PRIu32 "   %-12" PRId64 "   %g\n",
+          uk, psf->peak_info->peaks [uk].position, psf->peak_info->peaks [uk].value);
 		buffer [sizeof (buffer) - 1] = 0 ;
 		psf_log_printf (psf, "%s", buffer) ;
 		} ;

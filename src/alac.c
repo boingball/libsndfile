@@ -427,7 +427,7 @@ alac_decode_block (SF_PRIVATE *psf, ALAC_PRIVATE *plac)
 
 	plac->input_data_pos += packet_size ;
 	plac->frames_this_block = 0 ;
-	alac_decode (pdec, &bit_buffer, plac->buffer, plac->frames_per_block, &plac->frames_this_block) ;
+	alac_decode (pdec, &bit_buffer, (const int32_t *)plac->buffer, plac->frames_per_block, &plac->frames_this_block) ;
 
 	plac->partial_block_frames = 0 ;
 
@@ -440,7 +440,7 @@ alac_encode_block (ALAC_PRIVATE *plac)
 {	ALAC_ENCODER *penc = &plac->u.encoder ;
 	uint32_t num_bytes = 0 ;
 
-	alac_encode (penc, plac->partial_block_frames, plac->buffer, plac->byte_buffer, &num_bytes) ;
+	alac_encode (penc, plac->partial_block_frames, (const int32_t *)plac->buffer, plac->byte_buffer, &num_bytes) ;
 
 	if (fwrite (plac->byte_buffer, 1, num_bytes, plac->enctmp) != num_bytes)
 		return 0 ;

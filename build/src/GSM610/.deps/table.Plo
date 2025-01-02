@@ -1,0 +1,14 @@
+src/GSM610/table.lo: ../src/GSM610/table.c ../src/GSM610/gsm610_priv.h \
+ /opt/amiga13/m68k-amigaos/sys-include/stdint.h \
+ /opt/amiga13/m68k-amigaos/sys-include/machine/_default_types.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/features.h \
+ /opt/amiga13/m68k-amigaos/libnix/include/_newlib_version.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_intsup.h \
+ /opt/amiga13/m68k-amigaos/sys-include/sys/_stdint.h
+../src/GSM610/gsm610_priv.h:
+/opt/amiga13/m68k-amigaos/sys-include/stdint.h:
+/opt/amiga13/m68k-amigaos/sys-include/machine/_default_types.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/features.h:
+/opt/amiga13/m68k-amigaos/libnix/include/_newlib_version.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_intsup.h:
+/opt/amiga13/m68k-amigaos/sys-include/sys/_stdint.h:

@@ -1,0 +1,4 @@
+src/libcommon_la-windows.lo: ../src/windows.c ../src/sfconfig.h \
+ src/config.h
+../src/sfconfig.h:
+src/config.h:
